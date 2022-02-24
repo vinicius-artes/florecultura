@@ -265,19 +265,60 @@ a:hover {
 
 .content-scroll-lateral {
     height: 560px;
-    display: grid;
-    grid-template-columns: repeat(4, 294px);
-    gap: 60px;
+    max-width: 1100px;
+    display: flex;
+    gap: 30px;
+    margin: 0 auto;
     justify-items: center;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-behavior: smooth;
     padding-top: 2rem;
+   
+}
+.content-scroll-lateral::-webkit-scrollbar {
+    display: none;
+}
+.seta-before {
+    width: 40px;
+    height: 40px;
+    background: url(img/seta-before.svg) no-repeat center;
+    background-color: var(--cor-primaria);
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50vh;
+    left: 2vh;
+}
+.seta-before:hover {
+    background-color: var(--cor-terciaria);
+}
+.seta-next {
+    width: 40px;
+    height: 40px;
+    background: url(img/seta-next.svg) no-repeat center;
+    background-color: var(--cor-primaria);
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50vh;
+    right: 2vh;
+}
+.seta-next:hover {
+    background-color: var(--cor-terciaria);
+}
+.container-scroll-lateral {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 .content-mais-vendidos {
     padding: 3rem 1rem;
+    position: relative;
 }
 .content-produtos {
     height: 520px;
+    max-width: 100%;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
 }
 .content-produtos-grid {
